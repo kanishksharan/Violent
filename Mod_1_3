@@ -1,0 +1,32 @@
+# Accepting user inputs for a function from the command line
+# run this from linux command line. The editor used was vim
+import sys
+
+def print_lines(str):
+  for i in range(0,5):
+    print(str)
+    
+print_lines(sys.argv[1])
+
+# Another example
+
+import sys
+
+print 'Number of arguments:', len(sys.argv), 'arguments.'
+print 'Argument List:', str(sys.argv)
+
+#Now run above script as follows −
+
+$ python test.py arg1 arg2 arg3
+
+#This produce following result −
+
+Number of arguments: 4 arguments.
+Argument List: ['test.py', 'arg1', 'arg2', 'arg3']
+
+'''
+As mentioned above, first argument is always script name and it is also being counted in number of arguments.
+''''
+
+
+    
