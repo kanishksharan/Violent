@@ -1,0 +1,34 @@
+'''
+variables in python: - 
+They have no data type associated to them. Instead each variable is assigned to an object and that 
+object has a datype.
+'''
+ex: -
+name = "kanishk"
+here the variable name has no datatype, rather the object "kanishk" is associated with a datatype "String"
+
+
+Task #1:
+Find the loacation where "kanishk" is stored
+
+1. id(name)
+  hex(id(name)) # gives the hexadecimal location of the string object "kanishk"
+
+2. Method #2
+  name.__repr__ # This also gives the exact same value
+  
+Task #2 Printing with raw string  
+  name = r"kanishk\nsharan" # Printing with Raw String
+  print(name) # o/p = kanishk\nsharan
+  
+Task #3 Printing with 3 double quotes:
+  name = """
+  Kesha is calling this to be a
+  fun learning experience
+  """
+  
+Task #4: unicode to str and back (It works on shell prompt in linux but this func is not available on idle)
+name = u"ksha" #unicode string created
+str(name) # converted unicode to normal str
+unicode("Kanishk") # converting a normal string to Unicode. 
+                    #Note that unicode() doesn't take variables names. It takes direct strings only within the double quotes
