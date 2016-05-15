@@ -32,3 +32,10 @@ name = u"ksha" #unicode string created
 str(name) # converted unicode to normal str
 unicode("Kanishk") # converting a normal string to Unicode. 
                     #Note that unicode() doesn't take variables names. It takes direct strings only within the double quotes
+                    
+# In find() if the string does not exist then the o/p will be "-1"
+# use this cool method of finding "key" in a dictionary: "<key_name>" in <dict_name>; it will return true if the key exists.
+# To delete an item from the dic, use " del <dict_name>["key_name"]
+# To find the methods related to an objectuse, "dir(object_name)"
+# further to my previous point, "help(object_name.method)" gives further info about that associated object method.
+  ex: help(string.replace)
