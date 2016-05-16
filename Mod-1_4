@@ -25,3 +25,24 @@ new_pow = scientific(2,3)
 print(new_pow.add())
 print(new_pow.mul())
 print(new_pow.power())
+
+
+'''
+importing self made classes or user created custom classes
+'''
+
+import classes
+
+print(classes.call_me_via_import(16,3))
+
+call_mul = classes.calculator(5,25)
+call_inherit = classes.scientific(3,3)
+print(call_mul.mul())
+print(call_inherit.power())
+
+# variation 2
+
+from classes import scientific
+ical = scientific(4,3)
+print(ical.power())
+
