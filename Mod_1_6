@@ -1,0 +1,12 @@
+'''
+This program uses the package created in the "packages.py"
+via import.
+'''
+
+import packages
+
+imp = packages.calculator(3,9)
+imp2 = packages.scientific(3,3)
+
+print(imp.mul())
+print(imp2.power())
