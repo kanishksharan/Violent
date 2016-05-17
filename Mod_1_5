@@ -1,0 +1,14 @@
+# Packages: Packages are file directory structures in which we organize code
+# It can consist of sub packages and modules
+'''
+Here we are trying to designate this particular python file into
+a package.
+'''
+
+from classes import calculator, scientific
+
+'''
+Now this has become a Package and We can now
+import this package into our other programs
+'''
+
