@@ -6,6 +6,7 @@ a package.
 '''
 
 from classes import calculator, scientific
+from <file_name> import <class_name1>, <class_name2>
 
 '''
 Now this has become a Package and We can now
