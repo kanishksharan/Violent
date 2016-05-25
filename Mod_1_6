@@ -5,6 +5,9 @@ via import.
 
 import packages
 
+
+#It's always : imp = <file_name>.<class_name>
+
 imp = packages.calculator(3,9)
 imp2 = packages.scientific(3,3)
 
