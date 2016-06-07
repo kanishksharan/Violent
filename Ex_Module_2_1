@@ -1,0 +1,14 @@
+# Retrieve all the info containing USB from the /var/logs/dmesg
+
+import sys
+
+usbreader = open(sys.argv[1])
+print ("Print those lines from the file that contains USB in it\n")
+
+for line in usbreader.readlines():
+  if line.lower().find("usb") != -1:
+    print (line)
+
+print("End of file\n")
+
+# At the command prompt enter, "python3 usb_log.py /var/log/dmesg"
