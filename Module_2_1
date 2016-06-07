@@ -1,0 +1,31 @@
+File Systems in python:
+
+# Write/create file
+
+fwriter = open("python_written.txt","w")
+for count in range(1,200,2):
+    fwriter.write(str(count)+"\n")
+fwriter.close()
+
+
+
+# Append to file
+
+fwriter = open("python_written.txt","a")
+fwriter.write(str("Now we shall print the even number only\n"))
+for count in range(0,201,2):
+    fwriter.write(str(count)+"\n")
+fwriter.close()
+
+# Read from file
+
+fwriter = open("python_written.txt","r")
+for lines in fwriter.readlines():
+    print(lines.strip()) # This will remove "\n"
+fwriter.close()
+
+#Rename file
+
+import os
+os.rename("python_written.txt","renamed_written.txt")
+
