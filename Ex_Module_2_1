@@ -12,3 +12,24 @@ for line in usbreader.readlines():
 print("End of file\n")
 
 # At the command prompt enter, "python3 usb_log.py /var/log/dmesg"
+
+# A more advanced extension of this exercise. Writing the output of this file to another file
+
+# We are now going to read the contents of a file
+# We are goint to read the contents of the file /var/log/dmesg
+# Only those lines that contain "USB"
+# Write thse lines to a new file
+
+import sys
+
+freader = open(sys.argv[1])
+fwriter = open("usb.txt","w")
+
+for lines in freader.readlines():
+	if lines.lower().find("usb ") != -1:
+		fwriter.write(str(lines) +"\n")
+fwriter.write("End of file"+" \n")
+
+
+freader.close()
+fwriter.close()
