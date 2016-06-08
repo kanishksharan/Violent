@@ -1,0 +1,36 @@
+# Directory navigation
+# To work with dirs, you need to import "os" module
+# get getcwd
+
+os.getcwd()
+
+os.mkdir("dir_name")
+
+os.rmdir("dir_name")
+
+os.listdir("path") # Lists all the dirs/files in the provided path
+
+# Checking whether file or dirs
+
+for item in os.listdir("path"):
+  if os.path.isfile(item):
+      print("file")
+  elif os.path.isdir(item):
+      print("dir")
+  else:
+      print("Could be links")
+      
+# glob module allows pattern searches in file/dirs
+# os.path is another module with loads of methods
+
+import glob
+
+for item in glob.glob(os.path.join(".","*")) : # This will give files only
+  print(item)
+  
+for item in glob.glob(os.path.join(".","*.py")):
+  print(item)
+  
+
+      
+  
