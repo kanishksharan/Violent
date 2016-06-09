@@ -24,7 +24,7 @@ for item in os.listdir("path"):
 # glob module allows pattern searches in file/dirs
 # os.path is another module with loads of methods
 
-import glob
+import glob # Glob is only callable from python interpreter or from idle. It won't work in vim 
 
 for item in glob.glob(os.path.join(".","*")) : # This will give files only
   print(item)
