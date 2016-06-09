@@ -31,6 +31,17 @@ for item in glob.glob(os.path.join(".","*")) : # This will give files only
 for item in glob.glob(os.path.join(".","*.py")):
   print(item)
   
+# Changing Directories
+# Now we will try to change the current working directory to desktop
+
+import os
+
+curr = os.getcwd()
+print ("The current working directory is %s \n" %(curr))
+chng = os.chdir("/home/kanishk/Desktop")
+curr = os.getcwd()
+print ("Now, the current working directory has been changed to %s \n"%(curr))
+  
 
       
   
