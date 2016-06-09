@@ -1,0 +1,9 @@
+# Listing path, dir, files using os.walk
+
+import os, sys
+
+for (path, dir, files) in os.walk(sys.argv[1]):
+  depth_from_root = len(path.split("/"))
+  print("-" * (depth_from_root*4 +8) + " [" + path.split("/")[-1] + "]")
+  for f in files:
+    print("-" * (depth_from_root*4 + 8) + " " + f)                          
