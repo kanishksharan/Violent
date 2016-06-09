@@ -11,6 +11,7 @@ os.rmdir("dir_name")
 os.listdir("path") # Lists all the dirs/files in the provided path
 
 # Checking whether file or dirs
+# If trying to scan a dir other than the pwd, then change the getcwd to that particular dir
 
 for item in os.listdir("path"):
   if os.path.isfile(item):
