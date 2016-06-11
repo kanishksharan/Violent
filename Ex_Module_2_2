@@ -6,4 +6,23 @@ for (path, dir, files) in os.walk(sys.argv[1]):
   depth_from_root = len(path.split("/"))
   print("-" * (depth_from_root*4 +8) + " [" + path.split("/")[-1] + "]")
   for f in files:
-    print("-" * (depth_from_root*4 + 8) + " " + f)                          
+    print("-" * (depth_from_root*4 + 8) + " " + f)           
+    
+
+# File Stats
+
+import os
+import pwd # password dtabase modlule
+import sys
+
+filestat = os.stat(sys.argv[1])
+
+if filestat :
+  # get file size in bytes
+  print ("File name is: %s" %(sys.argv[1]))
+  print ("Size in bytes: %s" %(filestat.st_size))
+  print ("Owner UID is: %s, Username is: %s" %(filestat.st_uid, pwd.getpwuid(filestat.st_uid).pw_name))
+  # To convert the uid to a username. So "pwd.getpwuid()" returns the username for that corresponding uid
+  
+  
+
