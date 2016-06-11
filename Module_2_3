@@ -29,3 +29,5 @@ def parent_process():
   # os.execvp : This command overtakes the parent command and executes the child over parent. It doesnt wait for the child process to continue
   
   os.execvp("ping",["ping","127.0.0.1"])
+  os.execvp("libreoffice",["start"]) # 2 args are compulsary
+  
