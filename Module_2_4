@@ -15,3 +15,7 @@ for i in range(5):
     thread.start_new_thread(worker_thread,(i,))
 
 print ("the main thread is going for an infinite loop")
+
+while True:
+    pass
+    
