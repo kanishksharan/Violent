@@ -1,0 +1,27 @@
+# Forking = Cloning of process
+# It creates the clone of the parent process
+# Both parent and child processes will have different PID (process ids)
+# Only by calling the fork() module, we can distinguish between the parent and child processes. Child will 0 when fork is invoked.
+
+import os
+
+def child_process():
+  print (" I am the child process and my pid is: %s"%(os.getpid()))
+  print ("The child is exiting")
+  
+def parent_process():
+  print (" I am the parent process and my pid is" %s"%(os.getpid()))
+  childpid = os.fork()
+  
+  if childpif ==0:
+    #We are inside the child
+    child_process()
+  else:
+    # Else we are inside the parent process
+    print ("We are inside the parent process")
+    print ("Our child process id is: %s"%(childpid))
+  
+  while true:
+    pass
+  
+  parent_process()
