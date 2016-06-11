@@ -13,7 +13,7 @@ def parent_process():
   print (" I am the parent process and my pid is" %s"%(os.getpid()))
   childpid = os.fork()
   
-  if childpif ==0:
+  if childpid ==0:
     #We are inside the child
     child_process()
   else:
