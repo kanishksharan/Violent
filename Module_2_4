@@ -19,3 +19,23 @@ print ("the main thread is going for an infinite loop")
 while True:
     pass
     
+# Another variation of Threads ( I like this one better)
+
+from threading import Thread
+import time
+
+def worker_thread (i):
+    print ( "The thread id %d is now alive \n"%i)
+    count = 1
+
+    while True:
+        print ("Thread id %d has the count value %d"%(i,count))
+        time.sleep(5)
+        count += 1
+
+def starter():
+    for i in range(0,5):
+        t = Thread(target=worker_thread,args=(i,))
+        t.start()
+
+starter()
