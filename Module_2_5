@@ -1,0 +1,31 @@
+import queue
+from threading import Thread
+import time
+
+# create a thread class for the threads to receive tasks from queue
+class WorkerThread(Thread):
+    def __init__(self, queue):
+        Thread.__init__(self)
+        self.queue = queue
+
+    def run (self):
+        print ("inside worker Thread\n")
+        while True:
+            counter = self.queue.get()
+            print ("Ordered to sleep for %d seconds!\n"%counter)
+            time.sleep(counter)
+            print ("Finished sleeping for %d seconds\n"%counter)
+            self.queue.task_done()
+# To create task queue, we call the queue method
+q = queue.Queue()
+
+for i in range(10):
+    print ("Creating WorkerThread: %d\n"%i)
+    worker = WorkerThread(queue)
+    worker.setDaemon(True)
+    worker.start()
+    print("The WorkerThread  %d created\n"%i)
+
+for j in range (10):
+    q.put(j)
+print ("All tasks over")
