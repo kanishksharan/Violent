@@ -1,0 +1,24 @@
+# What are signals ?
+# All ow you to handle asynchronous ebents properly
+# For example: to terminate a process from the keyboard, we send a "kill -9 signal" that process is called SIGKILL
+# To get a comprehensive list of signals use : "man 7 signal"
+
+# Import signal
+# Write a signal handler
+# A simple program wherein, if we hit "ctrl+c" to kill a signal then the process should not terminate immediately.
+# After that provide the signal number: SIGINT
+# Other signals can also be used, such as
+  sigalarm
+  
+import signal
+
+def ctrlc_handler(signum, frame):
+    print ("Hahahaha !!! You can't kill me fucker.")
+
+# Creating an actual signal
+print ("Installing signal handler..........")
+signal.signal(signal.SIGINT,ctrlc_handler)
+
+# This will cause infinite loop
+while (True):
+    pass  
