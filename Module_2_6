@@ -14,7 +14,14 @@ import signal
 
 def ctrlc_handler(signum, frame):
     print ("Hahahaha !!! You can't kill me fucker.")
-
+    
+    # Use this only if you want to teminate the process
+    """
+    sys.exit()
+    """
+    
+    
+    
 # Creating an actual signal
 print ("Installing signal handler..........")
 signal.signal(signal.SIGINT,ctrlc_handler)
